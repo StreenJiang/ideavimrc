@@ -1,0 +1,67 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" =================================== Personal settings    ===================================
+" ----------------------------------- Common settings      -----------------------------------
+let mapleader=" "
+sethandler a:vim
+
+set clipboard^=unnamedplus,unnamed
+set showmode
+set number
+set relativenumber
+" ----------------------------------- End common settings  -----------------------------------
+
+" ----------------------------------- Key mappings         -----------------------------------
+" Commons
+nnoremap <leader>nt :action ShowNavBar <CR>
+nnoremap <leader>ca :action GotoAction <CR>
+nnoremap <F2> :action RenameElement <CR>
+
+" Tab actions
+nnoremap <C-p> :tabp <CR>
+nnoremap <C-n> :tabn <CR>
+nnoremap <C-a> :tabnew <CR> " Idea doesn't support opening an empty page
+unmap <C-a> " So disable this mapping
+nnoremap <C-c> :tabc <bar> tabp <CR>
+
+" Split window actions
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+" ----------------------------------- End key mappings      -----------------------------------
+
+" =================================== End personal settings ===================================
