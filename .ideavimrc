@@ -67,6 +67,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
+
+" Move in completion menu
+inoremap <C-p> :action EditorUp <CR>
+inoremap <C-n> :action EditorDown <CR>
+
 " ----------------------------------- End key mappings      -----------------------------------
 
 " =================================== End personal settings ===================================
