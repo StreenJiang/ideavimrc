@@ -41,14 +41,19 @@ sethandler a:vim
 set clipboard^=unnamedplus,unnamed
 set showmode
 set number
-set relativenumber
+set NERDTree
 " ----------------------------------- End common settings  -----------------------------------
 
 " ----------------------------------- Key mappings         -----------------------------------
 " Commons
-nnoremap <leader>nt :action ShowNavBar <CR>
-nnoremap <leader>ca :action GotoAction <CR>
+nnoremap <leader>ca :action ShowIntentionActions <CR>
 nnoremap <F2> :action RenameElement <CR>
+imap <C-n> :action MoveCaretDown <CR>
+imap <C-p> :action MoveCaretUp <CR>
+
+" NERDTree
+nnoremap <leader>nt :NERDTreeToggle <CR>
+nnoremap <leader>nf :NERDTreeFind <CR>
 
 " Tab actions
 nnoremap <C-p> :tabp <CR>
