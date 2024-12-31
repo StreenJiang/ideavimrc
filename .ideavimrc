@@ -51,6 +51,9 @@ nnoremap <F2> :action RenameElement <CR>
 imap <C-n> :action MoveCaretDown <CR>
 imap <C-p> :action MoveCaretUp <CR>
 
+" Debug actions
+nnoremap <leader>b :action ToggleLineBreakpoint <CR>
+
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle <CR>
 nnoremap <leader>nf :NERDTreeFind <CR>
