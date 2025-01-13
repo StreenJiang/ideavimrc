@@ -60,6 +60,9 @@ nnoremap <A-.> :action HideActiveWindow <CR>
 " For macos
 nnoremap <D-.> :action HideActiveWindow <CR>
 
+" Debug actions
+nnoremap <leader>b :action ToggleLineBreakpoint <CR>
+
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle <CR>
 nnoremap <leader>nf :NERDTreeFind <CR>
