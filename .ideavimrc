@@ -46,10 +46,19 @@ set NERDTree
 
 " ----------------------------------- Key mappings         -----------------------------------
 " Commons
-nnoremap <leader>ca :action ShowIntentionActions <CR>
 nnoremap <F2> :action RenameElement <CR>
-imap <C-n> :action MoveCaretDown <CR>
-imap <C-p> :action MoveCaretUp <CR>
+nnoremap <leader>ca :action ShowIntentionActions <CR>
+nnoremap <leader>rn :action RenameElement <CR>
+nnoremap <leader>sf :action SearchEverywhere <CR>
+nnoremap <leader>sg :action FindInPath <CR>
+" imap <C-n> :action MoveCaretDown <CR>
+" imap <C-p> :action MoveCaretUp <CR>
+
+" For windows
+nnoremap <A-.> :action HideActiveWindow <CR>
+
+" For macos
+nnoremap <D-.> :action HideActiveWindow <CR>
 
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle <CR>
@@ -58,9 +67,8 @@ nnoremap <leader>nf :NERDTreeFind <CR>
 " Tab actions
 nnoremap <C-p> :tabp <CR>
 nnoremap <C-n> :tabn <CR>
-nnoremap <C-a> :tabnew <CR> " Idea doesn't support opening an empty page
-unmap <C-a> " So disable this mapping
-nnoremap <C-c> :tabc <bar> tabp <CR>
+unmap <C-a> " Idea doesn't support opening an empty page, So disable this mapping
+noremap <C-c> :tabc <bar> tabp <CR>
 
 " Split window actions
 nnoremap <C-h> <C-w>h
@@ -71,6 +79,12 @@ nnoremap <C-k> <C-w>k
 " Move in completion menu
 inoremap <C-p> :action EditorUp <CR>
 inoremap <C-n> :action EditorDown <CR>
+
+" Code editing actions
+
+" Debug actions
+nnoremap <leader>b :action ToggleLineBreakpoint <CR>
+nnoremap <F5> :action DebugClass <CR>
 
 " ----------------------------------- End key mappings      -----------------------------------
 
