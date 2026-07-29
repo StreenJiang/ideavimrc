@@ -48,9 +48,9 @@ set NERDTree
 " Commons
 nnoremap <F2> :action RenameElement <CR>
 nnoremap <leader>ca :action ShowIntentionActions <CR>
-nnoremap <leader>rn :action RenameElement <CR>
-nnoremap <leader>sf :action SearchEverywhere <CR>
-nnoremap <leader>sg :action FindInPath <CR>
+nnoremap <leader>ff :action SearchEverywhere <CR>
+nnoremap <leader><leader> :action SearchEverywhere <CR>
+nnoremap <leader>/ :action FindInPath <CR>
 " imap <C-n> :action MoveCaretDown <CR>
 " imap <C-p> :action MoveCaretUp <CR>
 
@@ -64,8 +64,8 @@ nnoremap <D-.> :action HideActiveWindow <CR>
 nnoremap <leader>b :action ToggleLineBreakpoint <CR>
 
 " NERDTree
-nnoremap <leader>nt :NERDTreeToggle <CR>
-nnoremap <leader>nf :NERDTreeFind <CR>
+nnoremap <leader>ee :NERDTreeToggle <CR>
+nnoremap <leader>ef :NERDTreeFind <CR>
 
 " Tab actions
 nnoremap <C-p> :tabp <CR>
